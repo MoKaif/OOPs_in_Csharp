@@ -1,78 +1,66 @@
-What is OOPS?
---> OOPs is a programming paradigm that is built on concepts of class and objects rather than usual logic based system.
+# Object-Oriented Programming (OOPs)
 
-Relationship between class and object
---> A class is like a template or blueprint of an object. An object is the instance of the class
+OOPs is a programming paradigm built on the concepts of classes and objects, emphasizing a shift from traditional logic-based systems.
 
-Class Members
---> Fields and methods inside classes are often referred to as "Class Members": variables inside a class are called fields, and that you can access them by creating an object of the class, and by using the dot syntax (.) You can also leave the fields blank, and modify them when creating the object: Methods normally belong to a class, and they define how an object of a class behaves.
-Just like with fields, you can access methods with the dot syntax. However, note that the method must be public. And remember that we use the name of the method followed by two parentheses () and a semicolon ; to call (execute) the method:
+## Relationship between Class and Object
 
-Constructors
---> A constructor is a special method that is used to initialize objects. The advantage of a constructor, is that it is called when an object of a class is created. It can be used to set initial values for fields
-Important points to Remember About Constructors
+A class acts as a blueprint, defining the structure, while an object is an instance, embodying the characteristics outlined by the class.
 
-    Constructor of a class must have the same name as the class name in which it resides.
-    A constructor can not be abstract, final, and Synchronized.
-    Within a class, you can create only one static constructor.
-    A constructor doesn’t have any return type, not even void.
-    A static constructor cannot be a parameterized constructor.
-    A class can have any number of constructors.
-    Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor.
+## Class Members
 
-Types of Constructor
-Default Constructor
-Parameterized Constructor
-Copy Constructor
-Private Constructor
-Static Constructor
+Class members, including fields and methods, encapsulate the essence of an object's behavior. Fields are the object's attributes, and methods define its actions.
 
-Why Access Modifiers?
+## Constructors
 
-public The code is accessible for all classes
-private The code is only accessible within the same class
-protected The code is accessible within the same class, or in a class that is inherited from that class.
-internal The code is only accessible within its own assembly, but not from another assembly.
-To control the visibility of class members (the security level of each individual class and class member).
+Constructors are special methods initializing objects. Key considerations:
+- Same name as the class.
+- No abstract, final, or synchronized constructors.
+- Single static constructor per class.
+- No return type, even void.
+- Static constructors cannot be parameterized.
+- Multiple constructors allowed.
+- Access modifiers control visibility.
 
-To achieve "Encapsulation" - which is the process of making sure that "sensitive" data is hidden from users. This is done by declaring fields as private.
+### Types of Constructor
 
-- The Four Pillars of OOPs:
-  --Encapsulation
-  -- inheritence
-  -- polymorphism
-  -- Abstraction
+1. **Default Constructor**
+2. **Parameterized Constructor**
+3. **Copy Constructor**
+4. **Private Constructor**
+5. **Static Constructor**
 
-Encapsulation
-The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:
+## Why Access Modifiers?
 
-    declare fields/variables as private
-    provide public get and set methods, through properties, to access and update the value of a private field
+Access modifiers dictate the visibility of class members, ensuring encapsulation and safeguarding sensitive data.
 
-What is Properties in C#
-A property is like a combination of a variable and a method, and it has two methods: a get and a set method:
+- **Public:** Accessible to all classes.
+- **Private:** Accessible within the same class.
+- **Protected:** Accessible within the same or inherited class.
+- **Internal:** Accessible within its assembly.
 
-```
-class Person
-{
-  private string name; // field
+## The Four Pillars of OOPs
 
-  public string Name   // property
-  {
-    get { return name; }   // get method
-    set { name = value; }  // set method
-  }
-}
-```
+1. **Encapsulation**
+2. **Inheritance**
+3. **Polymorphism**
+4. **Abstraction**
 
-Why Encapsulation?
-    Better control of class members (reduce the possibility of yourself (or others) to mess up the code)
-    Fields can be made read-only (if you only use the get method), or write-only (if you only use the set method)
-    Flexible: the programmer can change one part of the code without affecting other parts
-    Increased security of data
+### Encapsulation
 
-Inheritance (Derived and Base Class)
-In C#, it is possible to inherit fields and methods from one class to another. We group the "inheritance concept" into two categories:
-    Derived Class (child) - the class that inherits from another class
-    Base Class (parent) - the class being inherited from
+Encapsulation conceals sensitive data from users, achieved by:
+- Declaring fields as private.
+- Providing public get and set methods (properties).
 
+### Inheritance
+
+Inheritance fosters the sharing of fields and methods between classes:
+- **Derived Class (Child):** Inherits from another class.
+- **Base Class (Parent):** Provides the blueprint.
+
+### Polymorphism
+
+Polymorphism allows treating objects of different types uniformly, promoting adaptability and dynamic behavior.
+
+### Abstraction
+
+Abstraction simplifies complex systems by highlighting essential details and hiding the unnecessary, enhancing clarity and maintainability.
